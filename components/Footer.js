@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./ui/Button";
@@ -7,9 +8,8 @@ export default function Footer() {
         <div className="bg-[#96722C]">
             <div className="container mx-auto">
                 <div className="relative p-4">
-                <div className="absolute left-1/2 -translate-x-1/2 bottom-0 bg-[#96722C]
-                w-[100px] h-[80px] rounded-t-[50%] curved-base
-                "></div>
+                <Image src="/icon/footer-round.svg" alt="" width={100} height={100} 
+                className="absolute left-1/2 -translate-x-1/2 -bottom-[4px] w-64 h-20" />
                 
                     <Image src="/icon/Isolation-white.svg"
                         alt=""

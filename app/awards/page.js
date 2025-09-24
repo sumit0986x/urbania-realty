@@ -8,6 +8,7 @@ export default function Awards() {
       year: "2025",
       title: "Global Architecture Awards",
       subtitle: "Innovative Use of Space in Urban Projects",
+      description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
       image: "/image/Rectangle 1571.jpg",
     },
     {
@@ -15,6 +16,7 @@ export default function Awards() {
       year: "2024",
       title: "Best Design Award",
       subtitle: "Sustainable Urban Solutions",
+      description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
       image: "/image/Rectangle 1570.jpg",
     },
     {
@@ -22,6 +24,7 @@ export default function Awards() {
       year: "2023",
       title: "Excellence in Architecture",
       subtitle: "Creative Use of Materials",
+      description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
       image: "/image/Rectangle 1569.jpg",
     },
         {
@@ -29,6 +32,7 @@ export default function Awards() {
       year: "2025",
       title: "Excellence in Architecture",
       subtitle: "Creative Use of Materials",
+      description:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
       image: "/image/Rectangle 1569.png",
     },
   ];
