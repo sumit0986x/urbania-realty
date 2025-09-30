@@ -35,10 +35,6 @@
 @tailwind utilities;
 
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
 html,
 body {
@@ -58,6 +54,7 @@ body {
   color: #333;
   line-height: 1.6;
   margin: 0;
+  background-color: #FEFBF5;
 
 }
 
@@ -105,7 +102,8 @@ h6 {
 }
 
 .small-text {
-  font-size: clamp(0.875rem, 1vw, 1rem);
+  font-size: clamp(0.875rem, 1.021vw, 1.021vw);
+  line-height: 1.4;
 }
 
 .text-shadow {
@@ -119,8 +117,6 @@ li,
 a,
 span {
   font-size: 1rem;
-  /* font-size: 0.875rem; */
-  /* font-size: 1.125rem; */
   line-height: 1.75rem;
 }
 
@@ -136,34 +132,7 @@ ol {
 }
 
 /* ---------------------------------------Button------------------------------- */
-/* .btn1 {
-  position: relative;
-  padding: 10px 30px;
-  border-radius: 25px;
-  border: 1px solid #96722c;
-  color: #96722c;
-  background-color: transparent;
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 1px;
-} */
 
-/* 
-.btn1::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -25px; 
-  transform: translateY(-50%); 
-  background-image: url("/icons/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60%;
-  background-color: #96722c;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-} */
 
 
 
@@ -200,3 +169,27 @@ ol {
 .curved-base::after {
   right: -20px;
 } */
+input,
+textarea {
+      border: none;
+    background: transparent;
+    border-bottom: 1px solid #96722C;
+    border-radius: 0px;
+    padding: 15px 0px;
+    outline: none;
+    font-size: 1.25rem;
+    color: black;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #3C3C3CB2;
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: inherit;
+        padding-right: 7vw;
+        padding-left: 7vw;
+    }
+}

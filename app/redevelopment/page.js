@@ -31,7 +31,7 @@ export default function Redevelopment() {
   return (
     <>
       <Banner
-        subtitle="Redevelopment"
+        title="Redevelopment"
         description="Where ideas meet innovation. Committed to excellence in all we do."
         backgroundImage="/banner/redevelopment.png"
       />

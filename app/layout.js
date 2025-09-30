@@ -1,5 +1,8 @@
+// import "./globals.css";
+import "@/style/globals.css"
 import Footer from "@/components/Footer";
-import "./globals.css";
+// import Navbar from "@/components/NavbarBar";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Urbania Realty",
@@ -10,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Navbar/>
         {children}
         <Footer/>
       </body>
