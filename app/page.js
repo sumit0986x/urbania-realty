@@ -1,4 +1,12 @@
+import AwardsSection from "@/components/home/AwardsSection";
+import BlogSection from "@/components/home/BlogSection";
+import Completed from "@/components/home/Compeleted";
+import RedevelopmentSection from "@/components/home/ProjectCards";
 import Banner from "@/components/ui/Banner"
+import Ongoing from "@/components/home/Ongoing";
+import Redevelopment from "@/components/home/Redevelopment";
+import ProjectTab from "@/components/home/Ongoing";
+import Intro from "@/components/home/Intro";
 
 export default function Home() {
   return (
@@ -10,6 +18,16 @@ export default function Home() {
         backgroundImage="/banner/home.jpg"
         titleClassName="text-5xl md:text-6xl"
       />
+
+<Intro/>
+
+<Completed/>
+{/* <Ongoing/> */}
+<ProjectTab/>
+<Redevelopment/>
+<AwardsSection/>
+<BlogSection/>
+
 
     </>
   );

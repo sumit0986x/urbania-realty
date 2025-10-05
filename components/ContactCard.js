@@ -27,22 +27,6 @@ export default function ContactCard({contactdata}) {
             ))}
 
         </div>
-
-
-                {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8  items-center">
-            <div className="relative border border-[#96722C] text-center px-4 pt-12 pb-5">
-                <Image 
-                src="/icon/location.svg"
-                alt=""
-                width={80}
-                height={80}
-                className="absolute left-1/2 -translate-x-1/2 -top-10 p-4 bg-[#FEFBF5] "
-                />
-                <h6 className="text-[#96722C] font-semibold">Office Address</h6>
-                <p className="font-sm"></p>
-                <p>501, Vastu Precinct, Atchuytrao Patwardhan Marg, Lokhandwala Complex, Andheri (West), Mumbai 400 053.</p>
-            </div>
-        </div> */}
       </div>
     </div>
   );

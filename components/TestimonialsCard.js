@@ -69,28 +69,26 @@ const testimonials = [
     location: "Churchgate, Mumbai",
     text: `“Their dedication and attention to detail stood out. We couldn’t be happier with our new home.”`,
   },
-  // Add more testimonials here
 ];
 
 export default function TestimonialsCard() {
   return (
-    <div className="container mx-auto py-20">
-        <div className="lg:container mx-auto py-20">
-      <h2 className="text-center mb-16 text-2xl lg:text-3xl font-semibold">
+    <div className="container mx-auto py-10">
+        <div className="lg:container mx-auto py-10">
+      <h3 className="text-center mb-16 ">
         Real stories. Real families. Real happiness.
-      </h2>
+      </h3>
 
       {testimonials.map((item, index) => {
-        const isReversed = index % 2 === 1; // 2,4,6,... cards reversed
+        const isReversed = index % 2 === 1; 
 
         return (
           <div
             key={index}
-            className={`relative flex items-center py-20 ${
+            className={`relative flex items-center py-16 lg:py-5 ${
               isReversed ? "flex-col lg:flex-row-reverse" : "flex-col lg:flex-row"
             } justify-end`}
           >
-            {/* Image Circle */}
             <div className="w-full h-full lg:w-[20%] relative flex items-center justify-center">
               <div
                 className={`bg-[#96722C] p-12 lg:p-16 xl:p-20 rounded-full absolute z-10 ${
@@ -106,10 +104,14 @@ export default function TestimonialsCard() {
                 />
               </div>
             </div>
+<div
+  className={`w-full lg:w-[80%] border border-[#96722C80] rounded-sm lg:py-20 ${
+    isReversed ? "lg:pr-40 lg:pl-12" : "lg:pl-40 lg:pr-12"
+  } lgx:px-20 px-8 pt-24 pb-12 rounded-br-[40px] relative`}
+>
 
-            {/* Text Box */}
-            <div className="w-full lg:w-[80%] border border-[#96722C80] rounded-sm lg:py-20 lg:pl-60 lg:pr-20 lgx:px-20 px-8 lgx:pt-32 pt-24 pb-12 rounded-br-[40px] relative">
-              <p className="text-lg italic mb-6">{item.text}</p>
+            {/* <div className="w-full lg:w-[80%] border border-[#96722C80] rounded-sm lg:py-20 lg:pl-40  lgx:px-20 px-8  pt-24 pb-12 rounded-br-[40px] relative"> */}
+              <p className="text-lg italic ">{item.text}</p>
               <h4 className="font-semibold">{item.name}</h4>
               <h4>{item.address}</h4>
               <p className="text-gray-600">{item.location}</p>

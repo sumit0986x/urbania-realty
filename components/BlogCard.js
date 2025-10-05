@@ -18,8 +18,9 @@ export default function BlogCard({ image, date, title, text, href }) {
         <p className="small-text text-[#96722C]">{date}</p>
         <h5 className="font-semibold mb-2">{title}</h5>
 
-        <p className="text-gray-700 leading-relaxed">
-          {text.length > 200 ? text.slice(0, 200) + "..." : text}
+        <p className="text-gray-700 leading-relaxed line-clamp-3">
+          {/* {text.length > 200 ? text.slice(0, 200) + "..." : text} */}
+          {text}
         </p>
       </div>
     </Link>

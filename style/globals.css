@@ -141,10 +141,10 @@ ol {
 
 
 .rotate-infinite {
-  animation: spin360 10s linear infinite;
+  animation: spinInfinate360 10s linear infinite;
 }
 
-@keyframes spin360 {
+@keyframes spinInfinate360 {
   from {
     transform: translateX(-50%) rotate(0deg);
   }
@@ -153,26 +153,20 @@ ol {
   }
 }
 
-
-
-/* .curved-base::before,
-.curved-base::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 40px;
-  height: 40px;
-  background: white; 
-  border-radius: 50%;
+.rotate-icon {
+  animation: spin360 7s linear infinite;
 }
 
-.curved-base::before {
-  left: -20px; 
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.curved-base::after {
-  right: -20px;
-} */
+
 input,
 textarea {
       border: none;
@@ -196,4 +190,15 @@ textarea::placeholder {
         padding-right: 7vw;
         padding-left: 7vw;
     }
+}
+
+.nav-menu > a {
+  /* font-size: 20px; */
+
+}
+
+@media (min-width: 768px) {
+  .menu {
+    clip-path: ellipse(100% 150% at 0% 30%);
+  }
 }

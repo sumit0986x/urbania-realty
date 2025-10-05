@@ -62,7 +62,7 @@ export default function Banner({
 
       <div className="absolute inset-0 bg-black/20"></div>
 
-      <div className="relative max-w-2xl z-10 flex flex-col items-center w-full md:w-3/5">
+      <div className="relative max-w-2xl  flex flex-col items-center w-full md:w-3/5">
         <h1 className={`text-white text-shadow mt-4 text-4xl ${titleClassName}`}>
           {title}
         </h1>
@@ -81,7 +81,7 @@ export default function Banner({
         )}
       </div>
 
-      <div className="absolute bottom-10 flex justify-center w-full z-10">
+      <div className="absolute bottom-10 flex justify-center w-full">
         <div className="relative w-[1px] h-[80px] bg-white flex justify-center">
           <div
             ref={scrollRef}
