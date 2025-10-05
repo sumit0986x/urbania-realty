@@ -1,32 +1,13 @@
-"use client";
+'use client';
+import CountUp from 'react-countup';
+import Image from 'next/image';
 
-import Image from "next/image";
-import Button from "../ui/Button";
-import CountUp from "react-countup";
-
-
-export default function Intro() {
+export default function Counter() {
   return (
-    <section className="py-10">
-    <div className='container mx-auto'>
-      <div className="flex flex-col lgx:flex-row gap-10">
-        <div className="w-full lgx:w-5/12">
-          <div className="h-full">
-            <h5 className="text-[#96722C]">Welcome to Urbania Realty</h5>
-            <h3 className="leading-snug">A legacy built on experience, trust,
-              quality living, and thoughtful design</h3>
-            <Button text="Read More" url="/" />
-          </div>
-        </div>
-        <div className="w-full lgx:w-7/12">
-          <div className="h-full">
-            <p className="text-gray-700 line-clamp-3">
-              We focus on creating design-led homes for people, not just projects. While our approach is
-              market-driven, every project is backed by thoughtful design and strong execution,
-              defining us as a premium developer in Mumbai.
-            </p>
-
-
+    <div className='w-full py-10 flex items-center '>
+    <div className='w-4/12 h-px bg-[#96722C70] md:block hidden'/>
+    
+    <div className='container md:w-8/12 mx-auto'>
       <div className="grid grid-cols-1 xs:grid-cols-5 gap-6 items-center text-center w-full">
         {/* Stat 1 */}
         <div className="w-full">
@@ -78,11 +59,10 @@ export default function Intro() {
           <h6 className="text-sm mt-3">Lakh Sq. Ft. Delivered</h6>
         </div>
       </div>
-
-          </div>
-        </div>
-      </div>
     </div>
-    </section>
+
+     <div className='w-4/12 h-px bg-[#96722C70] md:block hidden'/>
+
+    </div>
   )
 }
