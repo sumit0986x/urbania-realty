@@ -64,6 +64,7 @@ export default function Navbar() {
   };
 
   return (
+    <>
     <header>
       {/* Navbar */}
       <nav
@@ -253,13 +254,37 @@ export default function Navbar() {
       {/* Close Button */}
       {menuOpen && (
         <div
-          className="fixed top-[6%] md:top-1/2 right-[6%] md:right-[80px] -translate-y-1/2 z-50 cursor-pointer"
+          className="fixed top-[6%] md:top-1/2 right-[6%] md:right-[80px] -translate-y-1/2 z-[1002] cursor-pointer"
           onClick={() => setMenuOpen(false)}
         >
           <Image src="/icon/close.svg" alt="Close" width={50} height={50} />
         </div>
       )}
     </header>
+
+
+
+<div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 block md:hidden">
+      <div className="flex items-center justify-around bg-[#96722C] text-white rounded-full px-4 py-3 shadow-lg w-[90vw] max-w-md">
+        <a href="mailto:info@example.com" className="flex items-center text-xs gap-1">
+          <Image src="/icon/email-us.svg" alt=""  width={20} height={20} className="text-lg" />
+          EMAIL US
+        </a>
+        <div className="w-px h-6 bg-white/40 mx-2" />
+        <a href="tel:+911234567890" className="flex items-center text-xs gap-1">
+                    <Image src="/icon/call-us.svg" alt=""  width={20} height={20}  className="text-lg" />
+
+          CALL US
+        </a>
+        <div className="w-px h-6 bg-white/40 mx-2" />
+        <a href="#enquire" className="flex items-center text-xs gap-1">
+                    <Image src="/icon/enquire.svg" alt="" width={20} height={20}  className="text-lg" />
+
+          ENQUIRE
+        </a>
+      </div>
+    </div>
+    </>
   );
 }
 
