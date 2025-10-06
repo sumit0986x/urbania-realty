@@ -32,8 +32,7 @@ export default function Footer() {
                 </div>
 
 
-                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4 py-12">
-                    {/* Talk to Us */}
+                {/* <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4 py-12">
                     <div className="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-4 pb-3">
                         <h3 className="text-white">Talk to Us</h3>
                         <h5 className="text-white">Were Just a Message Away</h5>
@@ -48,47 +47,97 @@ export default function Footer() {
                         </Link>
                     </div>
 
-                    {/* About Us */}
                     <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
-                        <p className="font-semibold text-white mb-2">About Us</p>
-                        <ul className="space-y-1 text-[#FFFFFF99] small-text">
-                            <li><a href="#" className="hover:text-white small-text">About the company</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Vision & Mission</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Leadership Team</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Life at Urbania</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Job Openings</a></li>
+                        <p className="font-semibold text-white mb-2  text-lg lg:text-[1.1vw]">About Us</p>
+                        <ul className="space-y-1 text-white small-text ">
+                            <li><a href="#" className=" small-text ">About the company</a></li>
+                            <li><a href="#" className=" small-text ">Vision & Mission</a></li>
+                            <li><a href="#" className=" small-text ">Leadership Team</a></li>
+                            <li><a href="#" className=" small-text ">Life at Urbania</a></li>
+                            <li><a href="#" className=" small-text ">Job Openings</a></li>
                         </ul>
                     </div>
 
-                    {/* Useful Links */}
                     <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
-                        <p className="font-semibold text-white mb-2">Useful Links</p>
-                        <ul className="space-y-1 text-[#FFFFFF99] small-text">
-                            <li><a href="#" className="hover:text-white small-text">Testimonials</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Awards</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Blogs</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Life at Urbania</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Newsroom</a></li>
+                        <p className="font-semibold text-white mb-2 lg:text-[1.1vw]">Useful Links</p>
+                        <ul className="space-y-1 text-white small-text">
+                            <li><a href="#" className=" small-text ">Testimonials</a></li>
+                            <li><a href="#" className=" small-text ">Awards</a></li>
+                            <li><a href="#" className=" small-text ">Blogs</a></li>
+                            <li><a href="#" className=" small-text ">Life at Urbania</a></li>
+                            <li><a href="#" className=" small-text ">Newsroom</a></li>
                         </ul>
                     </div>
 
-                    {/* Projects */}
                     <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
-                        <p className="font-semibold text-white mb-2">Projects</p>
-                        <ul className="space-y-1 text-[#FFFFFF99] small-text">
-                            <li><a href="#" className="hover:text-white small-text">Ongoing</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Upcoming</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Completed</a></li>
+                        <p className="font-semibold text-white mb-2 lg:text-[1.1vw]">Projects</p>
+                        <ul className="gap-y-1 text-white small-text">
+                            <li><a href="#" className=" small-text ">Ongoing</a></li>
+                            <li><a href="#" className=" small-text ">Upcoming</a></li>
+                            <li><a href="#" className=" small-text ">Completed</a></li>
                         </ul>
                     </div>
 
-                    {/* Redevelopment */}
                     <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
-                        <p className="font-semibold text-white mb-2">Redevelopment</p>
-                        <ul className="space-y-1 text-[#FFFFFF99] small-text">
-                            <li><a href="#" className="hover:text-white small-text">Process</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Benefits</a></li>
-                            <li><a href="#" className="hover:text-white small-text">Partner with Us</a></li>
+                        <p className="font-semibold text-white mb-2 lg:text-[1.1vw]">Redevelopment</p>
+                        <ul className="gap-y-1 text-white small-text">
+                            <li><a href="#" className=" small-text ">Process</a></li>
+                            <li><a href="#" className=" small-text ">Benefits</a></li>
+                            <li><a href="#" className=" small-text ">Partner with Us</a></li>
+                        </ul>
+                    </div>
+                </div> */}
+
+
+                <div className="grid grid-cols-2 md:grid-cols-3 lgx:grid-cols-4 lg:grid-cols-6 gap-4 lg:gap-16 py-12">
+                    <div className="col-span-2 pb-3">
+                        <h3 className="text-white">Talk to Us</h3>
+                        <h5 className="text-white">Were Just a Message Away</h5>
+                        <p className="text-white small-text mb-5">Feel free to reach out anytime.</p>
+                        <Link href="/contact-us">
+                            <button className="relative px-[30px] py-[5px] rounded-[25px] border border-white text-white bg-transparent font-normal text-[14px] tracking-[1px]">
+                                Contact Us
+                                <span className="absolute top-1/2 right-[-25px] w-[40px] h-[40px] bg-[#96722c] border border-white rounded-full bg-center bg-no-repeat bg-[length:60%] transform -translate-y-1/2 transition-transform duration-600 ease-in-out"
+                                    style={{ backgroundImage: "url('/icon/arrow.svg')" }}
+                                />
+                            </button>
+                        </Link>
+                    </div>
+
+                    <div className="col-span-1 ">
+                        <p className="font-semibold text-white mb-2  text-lg lg:text-[1.1vw]">About Us</p>
+                        <ul className="space-y-1 text-white small-text ">
+                            <li><a href="#" className=" small-text ">About the company</a></li>
+                            <li><a href="#" className=" small-text ">Vision & Mission</a></li>
+                            <li><a href="#" className=" small-text ">Leadership Team</a></li>
+                            <li><a href="#" className=" small-text ">Job Openings</a></li>
+                        </ul>
+                    </div>
+
+                    <div className="col-span-1 ">
+                        <p className="font-semibold text-white mb-2 lg:text-[1.1vw]">Useful Links</p>
+                        <ul className="space-y-1 text-white small-text">
+                            <li><a href="#" className=" small-text ">Testimonials</a></li>
+                            <li><a href="#" className=" small-text ">Awards</a></li>
+                            <li><a href="#" className=" small-text ">Blogs</a></li>
+                        </ul>
+                    </div>
+
+                    <div className="col-span-1 ">
+                        <p className="font-semibold text-white mb-2 lg:text-[1.1vw]">Projects</p>
+                        <ul className="gap-y-1 text-white small-text">
+                            <li><a href="#" className=" small-text ">Ongoing</a></li>
+                            <li><a href="#" className=" small-text ">Upcoming</a></li>
+                            <li><a href="#" className=" small-text ">Completed</a></li>
+                        </ul>
+                    </div>
+
+                    <div className="col-span-1 ">
+                        <p className="font-semibold text-white mb-2 lg:text-[1.1vw]">Redevelopment</p>
+                        <ul className="gap-y-1 text-white small-text">
+                            <li><a href="#" className=" small-text ">Process</a></li>
+                            <li><a href="#" className=" small-text ">Benefits</a></li>
+                            <li><a href="#" className=" small-text ">Partner with Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -96,7 +145,7 @@ export default function Footer() {
 
                 <hr className="w-full border-[#FFFFFF36]" />
 
-                <div className="flex flex-col md:flex-row items-center gap-3 py-4 w-full text-white font-light">
+                <div className="flex flex-col md:flex-row items-center gap-3 py-4 w-full text-white ">
                     <p className="w-full md:w-1/3 text-center md:text-left small-text">
                         © 2025 URBANIA REALTY. All rights reserved.
                     </p>

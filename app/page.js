@@ -7,6 +7,7 @@ import Ongoing from "@/components/home/Ongoing";
 import Redevelopment from "@/components/home/Redevelopment";
 import ProjectTab from "@/components/home/Ongoing";
 import Intro from "@/components/home/Intro";
+import Testimonials from "@/components/home/Testimonials";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
 <ProjectTab/>
 <Redevelopment/>
 <AwardsSection/>
+<Testimonials/>
 <BlogSection/>
 
 

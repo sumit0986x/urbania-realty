@@ -1,0 +1,35 @@
+
+
+
+
+
+@media (min-width: 768px) {
+  .menu {
+    clip-path: ellipse(100% 150% at 0% 30%);
+  }
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff9ed;
+  color: #96722c;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: 1px solid #96722c;
+  opacity: 1;
+  transition: all 0.3s ease;
+  z-index: 1;
+  font-family: "Playfair Display", serif;
+  line-height: 1;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #96722c !important;
+  color: white !important;
+   transform: scale(1.1);
+}
