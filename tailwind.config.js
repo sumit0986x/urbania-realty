@@ -23,7 +23,7 @@ module.exports = {
         xs: "480px",  
         lgx: "900px", 
       },
-            // 👇 Add fluid font sizes for large screens
+          
       fontSize: {
         'sm-vw': 'clamp(12px, 1vw, 14px)',      // ~ text-sm
         'base-vw': 'clamp(14px, 1.2vw, 16px)',  // ~ text-base
@@ -33,6 +33,10 @@ module.exports = {
         '3xl-vw': 'clamp(24px, 2.5vw, 30px)',   // ~ text-3xl
         '4xl-vw': 'clamp(30px, 3vw, 36px)',     // ~ text-4xl
         '5xl-vw': 'clamp(36px, 4vw, 48px)',     // ~ text-5xl
+      },
+      colors: {
+        gold: "#96722C",
+        light: "#3C3C3C",
       },
     },
   },

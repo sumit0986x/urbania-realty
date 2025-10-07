@@ -75,7 +75,7 @@ export default function Navbar() {
             <div className="flex items-center flex-row-reverse md:flex-row justify-between py-4">
               {/* Left: Menu Button */}
               <div
-                className="flex items-center gap-2 w-1/4 md:justify-start flex-row-reverse md:flex-row"
+                className="flex items-center uppercase gap-2 w-1/4 md:justify-start flex-row-reverse md:flex-row"
                 style={{ color: isScrolled ? "#96722C" : "white" }}
               >
                 <Image
@@ -104,7 +104,7 @@ export default function Navbar() {
 
               {/* Right: Button */}
               <div className="w-1/4 justify-end hidden md:flex">
-                <Button text="Enquire Now" url="" />
+                <Button text="Enquire Now" url="" bgColor={isScrolled ? "transparent" : "rgba(0, 0, 0, 0.5)"}/>
               </div>
             </div>
           </div>

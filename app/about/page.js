@@ -17,8 +17,8 @@ export default function About() {
 <Overview/>
 <Counter/>
 <OurVisionMission/>
-<OurTeam/>
 <OurExpertise/>
+<OurTeam/>
       </>
     )
 }

@@ -16,7 +16,7 @@ export default function Completed() {
         { icon: "/icon/storeys.svg", text: "Ramp Parking" },
       ],
       buttonText: "View Details",
-      buttonUrl: "/projects/shivaji-park",
+      buttonUrl: "/projects/completed/shivaji-park",
     },
     {
       title: "Greenwood Heights",
@@ -31,23 +31,23 @@ export default function Completed() {
         { icon: "/icon/parking.svg", text: "Ramp Parking" },
       ],
       buttonText: "View Details",
-      buttonUrl: "/projects/greenwood-heights",
+      buttonUrl: "/projects/completed/greenwood-heights",
     },
   ];
-    return (
-        <>
-            <Banner
-                title="Completed Project"
-                description="Where ideas meet innovation. Committed to excellence in all we do."
-                backgroundImage="/banner/redevelopment.png"
-            />
-            <ProjectTabs
-                title="Showcasing our finest creations, built with trust and quality."
-                description="We focus on creating design-led homes for people, not just projects. While our approach is market-driven, every project is backed by thoughtful design and strong execution, defining us as a premium developer in Mumbai."
-            />
-                  {projects.map((project, index) => (
-                    <ProjectCard key={index} {...project} index={index} />
-                  ))}
-        </>
-    )
+  return (
+    <>
+      <Banner
+        title="Completed Project"
+        description="Where ideas meet innovation. Committed to excellence in all we do."
+        backgroundImage="/banner/redevelopment.png"
+      />
+      <ProjectTabs
+        title="Showcasing our finest creations, built with trust and quality."
+        description="We focus on creating design-led homes for people, not just projects. While our approach is market-driven, every project is backed by thoughtful design and strong execution, defining us as a premium developer in Mumbai."
+      />
+      {projects.map((project, index) => (
+        <ProjectCard key={index} {...project} index={index} />
+      ))}
+    </>
+  )
 }

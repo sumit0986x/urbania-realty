@@ -41,6 +41,153 @@ export default function Blogs() {
 }
 
 
+
+// "use client";
+
+// import BlogCard from "@/components/BlogCard";
+// import Banner from "@/components/ui/Banner";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Pagination } from "swiper/modules";
+
+// import "swiper/css";
+// import "swiper/css/pagination";
+
+// export default function Blogs() {
+//   const blogs = [
+//     // 🔁 Your existing blogs (add more to test pagination)
+//     {
+//       image: "/image/Rectangle 1569.jpg",
+//       date: "05 July 2024",
+//       title:
+//         "Elevating Sustainability at Commerz-II from LEED Gold to LEED Platinum",
+//       text: "We focus on creating design-led homes...",
+//       href: "/"
+//     },
+//     {
+//       image: "/image/Rectangle 1570.jpg",
+//       date: "15 August 2024",
+//       title: "Innovating Real Estate with a Human-Centered Design Philosophy",
+//       text: "At our core, we believe that great architecture...",
+//       href: "/"
+//     },
+//         {
+//       image: "/image/Rectangle 1570.jpg",
+//       date: "15 August 2024",
+//       title: "Innovating Real Estate with a Human-Centered Design Philosophy",
+//       text: "At our core, we believe that great architecture...",
+//       href: "/contact"
+//     },
+//         {
+//       image: "/image/Rectangle 1570.jpg",
+//       date: "15 August 2024",
+//       title: "Innovating Real Estate with a Human-Centered Design Philosophy",
+//       text: "At our core, we believe that great architecture...",
+//       href: "/awards"
+//     },
+//         {
+//       image: "/image/Rectangle 1570.jpg",
+//       date: "15 August 2024",
+//       title: "Innovating Real Estate with a Human-Centered Design Philosophy",
+//       text: "At our core, we believe that great architecture...",
+//       href: "/"
+//     },
+//         {
+//       image: "/image/Rectangle 1570.jpg",
+//       date: "15 August 2024",
+//       title: "Innovating Real Estate with a Human-Centered Design Philosophy",
+//       text: "At our core, we believe that great architecture...",
+//       href: "/"
+//     },
+//         {
+//       image: "/image/Rectangle 1570.jpg",
+//       date: "15 August 2024",
+//       title: "Innovating Real Estate with a Human-Centered Design Philosophy",
+//       text: "At our core, we believe that great architecture...",
+//       href: "/"
+//     },
+//         {
+//       image: "/image/Rectangle 1570.jpg",
+//       date: "15 August 2024",
+//       title: "Innovating Real Estate with a Human-Centered Design Philosophy",
+//       text: "At our core, we believe that great architecture...",
+//       href: "/"
+//     },
+//         {
+//       image: "/image/Rectangle 1570.jpg",
+//       date: "15 August 2024",
+//       title: "Innovating Real Estate with a Human-Centered Design Philosophy",
+//       text: "At our core, we believe that great architecture...",
+//       href: "/"
+//     },
+    
+//   ];
+
+//   // 🚀 Split blogs into chunks of 6
+//   const chunkSize = 6;
+//   const chunkedBlogs = [];
+//   for (let i = 0; i < blogs.length; i += chunkSize) {
+//     chunkedBlogs.push(blogs.slice(i, i + chunkSize));
+//   }
+
+//   return (
+//     <>
+//       <Banner
+//         title="Blogs"
+//         description="Explore ideas and inspirations driving premium living experiences."
+//         backgroundImage="/banner/blogs.png"
+//       />
+
+//       <div className="container mx-auto py-20">
+//         <h2 className="text-center mb-10">Stay informed. Stay inspired.</h2>
+
+// <Swiper
+//   modules={[Pagination]}
+//   pagination={{
+//     el: ".custom-pagination", 
+//     clickable: true,
+//     renderBullet: (index, className) => {
+//       const num = (index + 1).toString().padStart(2, "0"); // 👉 01, 02, etc.
+//       return `<span class="${className}">${num}</span>`;
+//     },
+//   }}
+//   spaceBetween={30}
+//   autoHeight={true}
+// >
+
+
+//           {chunkedBlogs.map((chunk, index) => (
+//             <SwiperSlide key={index}>
+//               <div className="grid md:grid-cols-2 gap-8">
+//                 {chunk.map((blog, blogIndex) => (
+//                   <BlogCard key={blogIndex} {...blog} />
+//                 ))}
+//               </div>
+//             </SwiperSlide>
+//           ))}
+//         </Swiper>
+//         <div className="custom-pagination flex justify-center gap-4 mt-10"></div>
+
+//       </div>
+
+      
+//     </>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------------------------
+
+
+
+
+
 // import BlogCard from "@/components/BlogCard";
 // import Banner from "@/components/ui/Banner";
 // import { fetchAPI } from "@/lib/api"; // import helper

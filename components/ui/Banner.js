@@ -15,7 +15,6 @@ export default function Banner({
   const imageRef = useRef(null);
 
   useEffect(() => {
-    // Scroll bounce animation
     if (scrollRef.current) {
       gsap.fromTo(
         scrollRef.current,
@@ -30,14 +29,13 @@ export default function Banner({
       );
     }
 
-    // Image zoom in/out animation
     if (imageRef.current) {
       gsap.fromTo(
         imageRef.current,
         { scale: 1 },
         {
-          scale: 1.1, // max zoom
-          duration: 8, // slow zoom for smooth effect
+          scale: 1.2,
+          duration: 5,
           repeat: -1,
           yoyo: true,
           ease: "power1.inOut",
