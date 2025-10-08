@@ -4,7 +4,7 @@ export default function Redevelopment() {
   return (
     <>
       <ProjectCards
-        title="Completed Projects"
+        title="Redevelopment Projects"
         bgColor="bg-[#FEF7EA]"
         projects={[
           {

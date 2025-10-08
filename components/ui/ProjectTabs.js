@@ -25,7 +25,7 @@ export default function ProjectTabs({ title, description }) {
               key={tab.name}
               href={tab.href}
               className={clsx(
-                "uppercase transition-colors py-2 px-10 rounded-full small-text",
+                "uppercase transition-colors py-2 px-6 xs:px-10 rounded-full small-text",
                 pathname === tab.href
                   ? "bg-[#96722C] text-white"
                   : "text-[#96722C] hover:text-[#96722C]"

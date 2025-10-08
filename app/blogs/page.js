@@ -190,10 +190,10 @@ export default function Blogs() {
 
 // import BlogCard from "@/components/BlogCard";
 // import Banner from "@/components/ui/Banner";
-// import { fetchAPI } from "@/lib/api"; // import helper
+// import { fetchAPI } from "@/lib/api"; 
 
 // export default async function Blogs() {
-//   const blogs = await fetchAPI("blogs?populate=*"); // fetch blogs dynamically
+//   const blogs = await fetchAPI("blogs?populate=*"); 
 
 //   return (
 //     <>
@@ -211,7 +211,6 @@ export default function Blogs() {
 //             blogs.map((blog) => {
 //               const { blog_heading, Publish_date, blog_content, Banner } = blog;
 
-//               // Extract first paragraph text
 //               let description = "";
 //               if (
 //                 blog_content &&
@@ -222,7 +221,6 @@ export default function Blogs() {
 //                 description = blog_content[0].children[0].text || "";
 //               }
 
-//               // Image URL
 //               const imageUrl =
 //                 Banner?.url
 //                   ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${Banner.url}`

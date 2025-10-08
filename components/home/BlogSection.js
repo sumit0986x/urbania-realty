@@ -5,7 +5,6 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Image from 'next/image';
-import Button from '../ui/Button';
 
 export default function BlogSection() {
   const blogs = [
@@ -38,7 +37,6 @@ export default function BlogSection() {
   return (
     <section className="py-10">
       <div className="container mx-auto">
-        {/* Header Row */}
         <div className="flex flex-wrap justify-between items-end">
           <div className="w-full sm:w-2/3">
             <h5 className=" text-[#96722C]">Insights & Updates</h5>
@@ -66,7 +64,6 @@ export default function BlogSection() {
           </div>
         </div>
 
-        {/* Swiper Slider */}
         <div className="py-6">
           <Swiper
             modules={[Navigation]}
@@ -106,10 +103,6 @@ export default function BlogSection() {
             ))}
           </Swiper>
         </div>
-
-        {/* <div className="text-center py-3">
-        <Button text="Read More" url="/" />
-        </div> */}
       </div>
     </section>
   );

@@ -16,7 +16,7 @@ export default function Ongoing() {
         { icon: "/icon/storeys.svg", text: "Ramp Parking" },
       ],
       buttonText: "View Details",
-      buttonUrl: "/projects/shivaji-park",
+      buttonUrl: "/projects/ongoing/shivaji-park",
     },
     {
       title: "Greenwood Heights",

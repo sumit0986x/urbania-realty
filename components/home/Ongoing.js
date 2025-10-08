@@ -1,46 +1,8 @@
-// import ProjectCards from "./ProjectCards";
-
-// export default function ProjectTab() {
-//     return (
-//         <>
-//                         <ProjectCards
-//                         reverse
-//                           title="Ongoing Projects"
-//                           bgColor="bg-[#FEF7EA]"
-//                           projects={[
-//                             {
-//                               title: "140 Shivaji Park",
-//                               subtitle: "140 Shivaji Park",
-//                               heading: "Shaping Skylines, One Project at a Time",
-//                               description:
-//                                 "With strong expertise in real estate redevelopment, we transform aging structures into thoughtfully designed, future-ready spaces.",
-//                               buttonText: "VIEW DETAILS",
-//                               buttonLink: "/projects/140-shivaji-park",
-//                               imageSrc: "/image/Rectangle 1555.png",
-//                             },
-//                             {
-//                               title: "Kohinoor Square",
-//                               subtitle: "Kohinoor Square",
-//                               heading: "A Landmark of Excellence",
-//                               description:
-//                                 "Modern architecture meets heritage in this stunning redevelopment project in Dadar.",
-//                               buttonText: "VIEW DETAILS",
-//                               buttonLink: "/projects/kohinoor-square",
-//                               imageSrc: "/image/Rectangle 1555.png",
-//                             },
-//                           ]}
-//                         />
-//         </>
-//     )
-// }
-
-
 "use client";
 import { useState } from "react";
 import ProjectCards from "./ProjectCards";
 
 export default function ProjectTab() {
-  // Step 1: Define your dummy data for both tabs
   const ongoingProjects = [
     {
       title: "140 Shivaji Park",
@@ -87,16 +49,13 @@ export default function ProjectTab() {
     },
   ];
 
-  // Step 2: Manage which tab is active
   const [activeTab, setActiveTab] = useState("ongoing");
 
-  // Step 3: Conditionally render projects based on the active tab
   const currentProjects =
     activeTab === "ongoing" ? ongoingProjects : upcomingProjects;
 
   return (
     <div className="w-full">
-      {/* Tabs */}
       <div className="flex justify-center ">
         <button
           onClick={() => setActiveTab("ongoing")}
@@ -119,7 +78,6 @@ export default function ProjectTab() {
         </button>
       </div>
 
-      {/* ProjectCards component */}
       <ProjectCards
         reverse
         // title={activeTab === "ongoing" ? "Ongoing Projects" : "Upcoming Projects"}

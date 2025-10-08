@@ -14,7 +14,6 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
 
-  // Detect mobile screen
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     handleResize();
@@ -22,7 +21,6 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Scroll listener
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     handleScroll();
@@ -66,14 +64,12 @@ export default function Navbar() {
   return (
     <>
       <header>
-        {/* Navbar */}
         <nav
-          className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ${isScrolled ? "backdrop-blur-lg bg-white/70 shadow-md" : "bg-transparent"
+          className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ${isScrolled ? "bg-white/50 backdrop-blur-lg shadow-md" : "bg-transparent"
             }`}
         >
           <div className="container mx-auto">
             <div className="flex items-center flex-row-reverse md:flex-row justify-between py-4">
-              {/* Left: Menu Button */}
               <div
                 className="flex items-center uppercase gap-2 w-1/4 md:justify-start flex-row-reverse md:flex-row"
                 style={{ color: isScrolled ? "#96722C" : "white" }}
@@ -91,7 +87,6 @@ export default function Navbar() {
                 </p>
               </div>
 
-              {/* Center: Logo */}
               <div className="flex-shrink-0 w-1/2 flex justify-start md:justify-center">
                 <Image
                   src={isScrolled ? "/icon/Isolation.svg" : "/icon/urbania-logo.svg"}
@@ -102,7 +97,6 @@ export default function Navbar() {
                 />
               </div>
 
-              {/* Right: Button */}
               <div className="w-1/4 justify-end hidden md:flex">
                 <Button text="Enquire Now" url="" bgColor={isScrolled ? "transparent" : "rgba(0, 0, 0, 0.5)"}/>
               </div>
@@ -110,12 +104,10 @@ export default function Navbar() {
           </div>
         </nav>
 
-        {/* Sidebar Menu */}
         <div
           className={`fixed top-0 left-0 h-full w-full md:w-3/4 flex menu bg-[#96722C] text-white shadow-lg z-[1001] transform transition-transform duration-300 overflow-y-auto
  ${menuOpen ? "translate-x-0" : "-translate-x-full"
             }`}
-        // style={{ paddingLeft: "40px", paddingRight: "40px" }}
         >
           <div className="w-full sm:w-5/12 lgx:w-4/12 
         py-20 flex flex-col sm:border-r-2 border-[#FFFFFF42] h-full text-white relative z-50">
@@ -132,14 +124,12 @@ export default function Navbar() {
                   onMouseEnter={() => !isMobile && setHoveredMenu(label)}
                   onMouseLeave={() => !isMobile && setHoveredMenu(null)}
                 >
-                  {/* Parent Menu Item */}
                   <div
                     className="flex items-center gap-3 group cursor-pointer transition-colors duration-300"
                     onClick={() =>
                       submenu ? toggleSubmenu(label) : handleMenuClick(href)
                     }
                   >
-                    {/* Isolation Icon */}
                     <div className="w-[20px] h-[20px] flex items-center justify-center">
                       <Image
                         src="/icon/Isolation-white.svg"
@@ -151,7 +141,6 @@ export default function Navbar() {
                       />
                     </div>
 
-                    {/* Label */}
                     <h5
                       className={`flex-1 transition-all duration-300 ${isActiveMenu && !hoveredMenu
                         ? "text-white"
@@ -161,7 +150,6 @@ export default function Navbar() {
                       {label}
                     </h5>
 
-                    {/* 📱 Arrow only visible on Mobile */}
                     {submenu && (
                       <Image
                         src="/icon/arrow.svg"
@@ -174,10 +162,8 @@ export default function Navbar() {
                     )}
                   </div>
 
-                  {/* Submenu */}
                   {submenu && isOpen && (
                     <>
-                      {/* 🖥️ Desktop (right side) */}
                       <div className="hidden sm:flex absolute left-full top-0 min-w-[200px] flex-col mt-0 px-5 z-40 transition-all duration-300">
                         {submenu.map((item) => {
                           const isActiveSubmenu = pathname === item.href;
@@ -201,7 +187,6 @@ export default function Navbar() {
                         })}
                       </div>
 
-                      {/* 📱 Mobile (dropdown below) */}
                       <div className="flex sm:hidden flex-col ml-8 mt-3 space-y-2 transition-all duration-300">
                         {submenu.map((item) => {
                           const isActiveSubmenu = pathname === item.href;
@@ -231,7 +216,6 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Menu Icon */}
           <div className="absolute bottom-[5%] md:top-1/2 right-[10%] md:-translate-y-1/2">
             <Image
               src="/icon/menu-icon.svg"
@@ -243,7 +227,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Overlay */}
         {menuOpen && (
           <div
             className="fixed inset-0 bg-black bg-opacity-30 z-30"
@@ -251,7 +234,6 @@ export default function Navbar() {
           />
         )}
 
-        {/* Close Button */}
         {menuOpen && (
           <div
             className="fixed top-[6%] md:top-1/2 right-[6%] md:right-[80px] -translate-y-1/2 z-[1002] cursor-pointer"
@@ -273,13 +255,11 @@ export default function Navbar() {
           <div className="w-px h-6 bg-white/40 mx-2" />
           <a href="tel:+911234567890" className="flex items-center text-xs gap-1">
             <Image src="/icon/call-us.svg" alt="" width={20} height={20} className="text-lg" />
-
             CALL US
           </a>
           <div className="w-px h-6 bg-white/40 mx-2" />
           <a href="#enquire" className="flex items-center text-xs gap-1">
             <Image src="/icon/enquire.svg" alt="" width={20} height={20} className="text-lg" />
-
             ENQUIRE
           </a>
         </div>

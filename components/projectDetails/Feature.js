@@ -48,7 +48,6 @@ export default function Feature() {
                         </div>
                     </div>
                 </div>
-                {/* Feature text and Content */}
                 <div className="w-full md:w-10/12 mx-auto text-center">
                     <h3>Iconic Residences With Spectacular and Expansive Views</h3>
                     <p className="text-light">Your apartment has a heritage address in South Mumbai that
@@ -65,7 +64,6 @@ export default function Feature() {
                             className="object-cover rounded-sm"
                         />
                     </div>
-
                 </div>
             </div>
         </section>
