@@ -12,6 +12,10 @@ const sharedImages = [
   { id: 2, src: "/image/Rectangle 1569.jpg", alt: "Shared Interior 2" },
   { id: 3, src: "/image/Rectangle 1569.jpg", alt: "Shared Interior 3" },
   { id: 4, src: "/image/Rectangle 1569.jpg", alt: "Shared Interior 4" },
+  { id: 5, src: "/image/Rectangle 1569.jpg", alt: "Shared Interior 4" },
+  { id: 6, src: "/image/Rectangle 1569.jpg", alt: "Shared Interior 4" },
+  { id: 7, src: "/image/Rectangle 1569.jpg", alt: "Shared Interior 4" },
+
 ];
 
 const livingImages = [
@@ -37,17 +41,17 @@ export default function Gallery() {
   return (
     <section className="py-16">
       <div className="container mx-auto">
-        <div className="flex items-end justify-between gap-4">
-          <div className="w-full md:w-6/12">
+        <div className="flex flex-col lgx:flex-row items-end justify-between gap-4">
+          <div className="w-full lgx:w-6/12">
             <h3>A Glimpse Into Luxury</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s.
             </p>
           </div>
 
-          <div className="flex border border-[#96722C] rounded-full">
+          <div className="flex border border-[#96722C] rounded-full lgx:mx-0 mx-auto">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
@@ -67,57 +71,133 @@ export default function Gallery() {
       </div>
 
       <div className="mt-8 relative">
-        <div className="relative">
-          <Swiper
-            modules={[Navigation, Scrollbar]}
-            navigation={{
-              nextEl: ".custom-next",
-              prevEl: ".custom-prev",
-            }}
-            
-            scrollbar={{el: ".custom-scrollbar", draggable: true }}
-            spaceBetween={30}
-            slidesPerView={1}
-            breakpoints={{
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className="mt-6"
+<div className="relative">
+  {activeTab === "shared" && (
+    <>
+      <Swiper
+        key="shared"
+        modules={[Navigation, Scrollbar]}
+        navigation={{
+          nextEl: ".custom-next-shared",
+          prevEl: ".custom-prev-shared",
+        }}
+        scrollbar={{ el: ".custom-scrollbar-shared", draggable: true }}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        spaceBetween={20}
+        loop={true}
+        className="mt-6"
+      >
+        {sharedImages.map((img) => (
+          <SwiperSlide
+            key={img.id}
+            className="!w-[80%] md:!w-[60%] lg:!w-[50%] xl:!w-[40%] transition-all duration-300 ease-in-out"
           >
-            {getImages().map((img) => (
-              <SwiperSlide key={img.id}>
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full object-cover"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+            <Image
+              src={img.src}
+              alt={img.alt}
+              width={1000}
+              height={1000}
+              className="w-full object-cover rounded-sm shadow-md"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+<div className="container mx-auto">
+      <div className="flex gap-10 sm:gap-20 mt-6 pr-4 lg:pr-[2.604vw] items-center justify-between">
+        <div className="custom-scrollbar-shared flex-grow h-[2px] w-full rounded-full bg-gray-300 cursor-pointer"></div>
 
-          <div className="container mx-auto">
-            <div className="flex gap-4 mt-6 pr-4 lg:pr-[2.604vw] items-center justify-between">
-              <div className="custom-scrollbar flex-grow h-[2px] w-full rounded-full bg-gray-300 cursor-pointer"></div>
+<div className="gap-2 sm:gap-4 flex">
+        <div className="custom-prev-shared cursor-pointer">
+          <Image
+            src="/icon/arrow-circle-left.svg"
+            alt="prev"
+            width={40}
+            height={40}
+                        className="w-10 h-10 md:w-12 md:h-12"
 
-              <div className="custom-prev cursor-pointer">
-                <Image
-                  src="/icon/arrow-circle-left.svg"
-                  alt="prev"
-                  width={40}
-                  height={40}
-                />
-              </div>
-              <div className="custom-next cursor-pointer">
-                <Image
-                  src="/icon/arrow-circle-right.svg"
-                  alt="next"
-                  width={40}
-                  height={40}
-                />
-              </div>
-            </div>
-          </div>
+          />
         </div>
+        <div className="custom-next-shared cursor-pointer">
+          <Image
+            src="/icon/arrow-circle-right.svg"
+            alt="next"
+            width={40}
+            height={40}
+            className="w-10 h-10 md:w-12 md:h-12"
+
+          />
+        </div>
+        </div>
+      </div>
+      </div>
+    </>
+  )}
+
+  {activeTab === "living" && (
+    <>
+      <Swiper
+        key="living"
+        modules={[Navigation, Scrollbar]}
+        navigation={{
+          nextEl: ".custom-next-living",
+          prevEl: ".custom-prev-living",
+        }}
+        scrollbar={{ el: ".custom-scrollbar-living", draggable: true }}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        spaceBetween={20}
+        loop={true}
+        className="mt-6"
+      >
+        {livingImages.map((img) => (
+          <SwiperSlide
+            key={img.id}
+            className="!w-[80%] md:!w-[60%] lg:!w-[50%] xl:!w-[40%] transition-all duration-300 ease-in-out"
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              width={1000}
+              height={1000}
+              className="w-full object-cover rounded-lg shadow-md"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+<div className="container mx-auto">
+      <div className="flex gap-10 sm:gap-20 mt-6 pr-4 lg:pr-[2.604vw] items-center justify-between">
+        <div className="custom-scrollbar-living flex-grow h-[2px] w-full rounded-full bg-gray-300 cursor-pointer"></div>
+
+<div className="gap-2 sm:gap-4 flex">
+        <div className="custom-prev-living cursor-pointer">
+          <Image
+            src="/icon/arrow-circle-left.svg"
+            alt="prev"
+            width={40}
+            height={40}
+                        className="w-10 h-10 md:w-12 md:h-12"
+
+          />
+        </div>
+        <div className="custom-next-living cursor-pointer">
+          <Image
+            src="/icon/arrow-circle-right.svg"
+            alt="next"
+            width={40}
+            height={40}
+            className="w-10 h-10 md:w-12 md:h-12"
+
+          />
+        </div>
+        </div>
+      </div>
+      </div>
+    </>
+  )}
+</div>
+
       </div>
     </section>
   );

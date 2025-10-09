@@ -80,8 +80,6 @@ export default function ProjectTab() {
 
       <ProjectCards
         reverse
-        // title={activeTab === "ongoing" ? "Ongoing Projects" : "Upcoming Projects"}
-        // bgColor={activeTab === "ongoing" ? "bg-[#FEF7EA]" : "bg-[#EAF7FE]"}
         projects={currentProjects}
       />
     </div>

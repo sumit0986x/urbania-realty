@@ -1,9 +1,9 @@
-/* Playfair Display */
 @font-face {
   font-family: "Playfair Display";
   src: url("/font/PlayfairDisplay-VariableFont_wght.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -12,14 +12,16 @@
     format("woff2");
   font-weight: 100 900;
   font-style: italic;
+  font-display: swap;
 }
 
-/* Source Sans 3 */
 @font-face {
   font-family: "Source Sans 3";
   src: url("/font/SourceSans3-VariableFont_wght.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
+
 }
 
 @font-face {
@@ -27,6 +29,7 @@
   src: url("/font/SourceSans3-Italic-VariableFont_wght.woff2") format("woff2");
   font-weight: 100 900;
   font-style: italic;
+  font-display: swap;
 }
 
 /* ------------------------------------------------------------------ */
@@ -110,7 +113,6 @@ h6 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* p, */
 p,
 li,
 a,
@@ -130,7 +132,6 @@ ol {
   padding-left: 0px !important;
 }
 
-/* ---------------------------------------Button------------------------------- */
 
 .rotate-infinite {
   animation: spinInfinate360 10s linear infinite;
@@ -182,6 +183,3 @@ textarea::placeholder {
   }
 }
 
-.nav-menu > a {
-  /* font-size: 20px; */
-}
